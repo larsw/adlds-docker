@@ -1,0 +1,36 @@
+[ADAMInstall]
+; Based on the documentation found here:
+; https://technet.microsoft.com/en-us/library/cc816774(v=ws.10).aspx
+ShowOrHideProgressGUI=Hide
+InstallType=Unique
+InstanceName=Default
+LocalLDAPPortToListenOn=389
+NewApplicationPartitionToCreate="DC=local"
+DataFilesPath=c:\adlds\data
+LogFilesPath=c:\adlds\logs
+ServiceAccount=ADLDSSvc
+ServicePassword=4DLD$$vc2017!
+Administrator="AD LDS Admins"
+AddPermissionsToServiceAccount=Yes
+SourceUsername=.\ADLDSAdmin
+SourcePassword=4DLD$4dmin2017!
+ImportLDIFFiles="MS-ADLDS-DisplaySpecifiers.LDF" "MS-User.LDF" "MS-InetOrgPerson.LDF" "MS-MembershipTransitive.LDF"
+
+; The following LDIF files are bundled with Windows Server 2016:
+; MS-ADAM-Upgrade-1.LDF
+; MS-ADAM-Upgrade-2.LDF
+; MS-adamschemaw2k3.LDF
+; MS-adamschemaw2k8.LDF
+; MS-AdamSyncConf.XML
+; MS-AdamSyncMetadata.LDF
+; MS-ADLDS-DisplaySpecifiers.LDF
+; MS-AZMan.LDF
+; MS-InetOrgPerson.LDF
+; MS-MembershipTransitive.LDF
+; MS-ParentDistname.LDF
+; MS-ReplValMetadataExt.LDF
+; MS-SecretAttributeCARs.LDF
+; MS-SetOwnerBypassQuotaCARs.LDF
+; MS-User.LDF
+; MS-UserProxy.LDF
+; MS-UserProxyFull.LDF
